@@ -1,0 +1,56 @@
+{
+  "name": "exercise-01",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "ola",
+  "license": "Apache-2.0",
+  "repository": "github:olkanalazek/javascript",
+  "homepage": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-strict": "^14.0.1",
+    "eslint-plugin-filenames": "^1.3.2",
+    "jest": "^27.0.6"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
+    "testMatch": [
+      "tests/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "ignorePatterns": [
+      "**/node_modules/"
+    ],
+    "extends": [
+      "prettier"
+    ]
+  }
+}
