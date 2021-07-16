@@ -1,4 +1,4 @@
-import { sum, substract, multiplication, division } from "../src/index";
+import { sum, substract, multiplication, division, power } from "../src/index";
 
 describe("combined", () => {
   test("should use combined operations 1", () => {
@@ -32,7 +32,20 @@ describe("combined", () => {
         )
       )
     );
+
     const expected = 4863468.83;
+
+    expect(given).toEqual(expected);
+  });
+
+  test("should use combined operations 4", () => {
+    // ((5^5) * 2)^3 - (10 / 5)
+    const given = substract(
+      power(multiplication(2, power(5, 5)), 3),
+      division(10, 5)
+    );
+
+    const expected = 244140624998;
 
     expect(given).toEqual(expected);
   });
