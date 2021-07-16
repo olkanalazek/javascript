@@ -1,4 +1,4 @@
-import { sum, substract, multiplication } from "../src/index";
+import { sum, substract, multiplication, division } from "../src/index";
 
 describe("combined", () => {
   test("should use combined operations 1", () => {
@@ -19,7 +19,19 @@ describe("combined", () => {
 
   test("should use combined operations 3", () => {
     // (20 / 4) * (-20 - -20.5 * ((20 / 4) * 12 * 23.11 * 34.22))
-    const given = 0;
+    const given = multiplication(
+      division(20, 4),
+      substract(
+        -20,
+        multiplication(
+          -20.5,
+          multiplication(
+            12,
+            multiplication(23.11, multiplication(34.22, division(20, 4)))
+          )
+        )
+      )
+    );
     const expected = 4863468.83;
 
     expect(given).toEqual(expected);
