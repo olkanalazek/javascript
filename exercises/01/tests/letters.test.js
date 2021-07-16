@@ -8,7 +8,11 @@ describe("letters", () => {
     }
   );
 
-  test("sanity check", () => {
-    expect(count("olaolaolaola")).toEqual({ o: 1, l: 1, a: 1 });
+  test("sanity check 1", () => {
+    expect(count("olaolaola")).toEqual({ o: 3, l: 3, a: 3 });
+  });
+
+  test("sanity check 2", () => {
+    expect(count("olaolaolaola!")).toEqual({ o: 4, l: 4, a: 4, "!": 1 });
   });
 });

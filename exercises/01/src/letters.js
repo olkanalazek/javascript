@@ -1,3 +1,6 @@
+// count("ola") => { o: 1, l: 1, a: 1 }
+// count("olaola") => { o: 2, l: 2, a: 2 }
+
 const count = (input) => {
   let result = {};
 
