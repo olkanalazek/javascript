@@ -1,4 +1,11 @@
-import { sum, substract, multiplication, division, power } from "../src/index";
+import {
+  sum,
+  substract,
+  multiplication,
+  division,
+  power,
+  sqrt,
+} from "../src/index";
 
 describe("combined", () => {
   test("should use combined operations 1", () => {
@@ -49,4 +56,17 @@ describe("combined", () => {
 
     expect(given).toEqual(expected);
   });
+
+  test("should use combined operations 5", () => {
+    const given = sum(
+      substract(multiplication(sqrt(1024), power(2, 4)), 128),
+      multiplication(3, 3)
+    );
+
+    const expected = 393;
+
+    expect(given).toEqual(expected);
+  });
+
+  // sqrt(1024) * 2^4 - 128 + (3 * 3) = 393 });
 });
