@@ -5,6 +5,7 @@ import {
   division,
   power,
   sqrt,
+  sin,
 } from "../src/index";
 
 describe("combined", () => {
@@ -68,4 +69,6 @@ describe("combined", () => {
 
     expect(given).toEqual(expected);
   });
+
+  // sin(45) * cos(90) = -0.38126
 });

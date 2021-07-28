@@ -5,5 +5,6 @@ import { multiplication } from "./multiplication";
 import { division } from "./division";
 import { power } from "./power";
 import { sqrt } from "./sqrt";
+import { sin } from "./sin";
 
-export { count, sum, substract, multiplication, division, power, sqrt };
+export { count, sum, substract, multiplication, division, power, sqrt, sin };
