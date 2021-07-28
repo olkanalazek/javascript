@@ -58,6 +58,7 @@ describe("combined", () => {
   });
 
   test("should use combined operations 5", () => {
+    // sqrt(1024) * 2^4 - 128 + (3 * 3) = 393 });
     const given = sum(
       substract(multiplication(sqrt(1024), power(2, 4)), 128),
       multiplication(3, 3)
@@ -67,6 +68,4 @@ describe("combined", () => {
 
     expect(given).toEqual(expected);
   });
-
-  // sqrt(1024) * 2^4 - 128 + (3 * 3) = 393 });
 });
