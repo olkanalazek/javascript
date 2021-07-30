@@ -6,5 +6,18 @@ import { division } from "./division";
 import { power } from "./power";
 import { sqrt } from "./sqrt";
 import { sin } from "./sin";
+import { cos } from "./cos";
+import { tan } from "./tan";
 
-export { count, sum, substract, multiplication, division, power, sqrt, sin };
+export {
+  count,
+  sum,
+  substract,
+  multiplication,
+  division,
+  power,
+  sqrt,
+  sin,
+  cos,
+  tan,
+};

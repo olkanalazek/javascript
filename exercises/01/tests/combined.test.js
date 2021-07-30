@@ -6,6 +6,8 @@ import {
   power,
   sqrt,
   sin,
+  cos,
+  tan,
 } from "../src/index";
 
 describe("combined", () => {
@@ -70,5 +72,21 @@ describe("combined", () => {
     expect(given).toEqual(expected);
   });
 
-  // sin(45) * cos(90) = -0.38126
+  test("should use combined operations 6", () => {
+    // sin(45) * cos(90) = -0.38126
+    const given = multiplication(sin(45), cos(90));
+
+    const expected = -0.3812674192150585;
+
+    expect(given).toEqual(expected);
+  });
+
+  test("should use combined operations 7", () => {
+    // sin(45) * cos(90) + tan(45) = 1.238507771328803
+    const given = sum(multiplication(sin(45), cos(90)), tan(45));
+
+    const expected = 1.238507771328803;
+
+    expect(given).toEqual(expected);
+  });
 });
