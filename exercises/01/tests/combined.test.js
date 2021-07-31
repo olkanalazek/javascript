@@ -89,4 +89,15 @@ describe("combined", () => {
 
     expect(given).toEqual(expected);
   });
+  test("should use combined operations 8", () => {
+    //() sin(45) * cos(90) )* sin(45) * cos(90) + tan(45) = -0.4722026616
+    const given = multiplication(
+      multiplication(sin(45), cos(90)),
+      sum(multiplication(sin(45), cos(90)), tan(45))
+    );
+
+    const expected = -0.4722026616523266;
+
+    expect(given).toEqual(expected);
+  });
 });
