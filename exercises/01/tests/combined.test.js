@@ -89,6 +89,7 @@ describe("combined", () => {
 
     expect(given).toEqual(expected);
   });
+  
   test("should use combined operations 8", () => {
     //() sin(45) * cos(90) )* sin(45) * cos(90) + tan(45) = -0.4722026616
     const given = multiplication(
@@ -97,6 +98,21 @@ describe("combined", () => {
     );
 
     const expected = -0.4722026616523266;
+
+    expect(given).toEqual(expected);
+  });
+
+  //                 (27 * 11) /      (-13 - -13.5)  / ((27 * 11) / 19 / 30.11 / 41.22))
+  test("should use combined operations 9", () => {
+    const given = division(
+      multiplication(27, 11),
+
+      division(
+        substract(-13, -13.5),
+        division(division(division(multiplication(27, 11), 19), 30.11), 41.22)
+      )
+    );
+    const expected = 7.481187686824554;
 
     expect(given).toEqual(expected);
   });
